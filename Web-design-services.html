@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design Services | Katameya Pharma</title>
+    <meta name="description" content="Katameya Pharma provides licensed web design services. We craft clean, SEO-optimized web pages for pharmaceutical companies, healthcare brands, clinics, and medical practices.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#C5A059',
+                            rose: '#E6C7C2',
+                            light: '#FBF9F7',
+                            dark: '#1C1C1C',
+                            muted: '#7A7A7A'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts (Cairo for Arabic, Inter & Playfair Display for Latin) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FBF9F7;
+            color: #1C1C1C;
+        }
+        h1, h2, h3, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Arabic typography overrides */
+        [dir="rtl"] body,
+        [dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] .font-serif {
+            font-family: 'Cairo', sans-serif;
+        }
+        [dir="rtl"] h1, [dir="rtl"] h2 { font-weight: 600; line-height: 1.4; }
+        [dir="rtl"] .tracking-widest { letter-spacing: 0; }
+        a:focus-visible, button:focus-visible {
+            outline: 2px solid #C5A059;
+            outline-offset: 3px;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto !important; }
+            * { transition: none !important; }
+        }
+    </style>
+</head>
+<body class="bg-brand-light text-brand-dark antialiased selection:bg-brand-rose selection:text-brand-dark">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-40 bg-brand-light/90 backdrop-blur-md border-b border-stone-200/60">
+        <div class="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between gap-4">
+            <a href="index.html" class="group">
+                <span class="font-serif font-bold text-lg tracking-wider block text-brand-dark">Katameya Pharma</span>
+                <span class="text-[9px] tracking-widest uppercase text-brand-muted font-medium block" data-i18n="brandSub">Web Design Services</span>
+            </a>
+            <div class="flex items-center gap-6">
+                <nav class="hidden md:flex items-center gap-7 text-xs font-medium tracking-widest uppercase text-brand-muted">
+                    <a href="index.html" class="hover:text-brand-dark transition-colors" data-i18n="navHome">Home</a>
+                    <a href="#solutions" class="hover:text-brand-dark transition-colors" data-i18n="navSolutions">Solutions</a>
+                    <a href="#features" class="hover:text-brand-dark transition-colors" data-i18n="navFeatures">What's included</a>
+                    <a href="#process" class="hover:text-brand-dark transition-colors" data-i18n="navProcess">How it works</a>
+                    <a href="#contact" class="hover:text-brand-dark transition-colors" data-i18n="navContact">Contact</a>
+                </nav>
+                <button id="lang-btn" type="button" class="text-xs font-medium tracking-widest uppercase text-brand-dark border border-stone-300 hover:border-brand-gold hover:text-brand-gold rounded-full px-4 py-2 transition-colors" aria-label="Switch language">العربية</button>
+                <button id="menu-btn" type="button" aria-label="Toggle menu" aria-expanded="false" class="md:hidden text-brand-dark p-2">
+                    <i class="fa-solid fa-bars text-lg"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-light border-b border-stone-200 px-6 py-4 space-y-3">
+            <a href="index.html" class="block text-xs uppercase tracking-widest py-1 text-brand-muted hover:text-brand-dark" data-i18n="navHome">Home</a>
+            <a href="#solutions" class="block text-xs uppercase tracking-widest py-1 text-brand-muted hover:text-brand-dark" data-i18n="navSolutions">Solutions</a>
+            <a href="#features" class="block text-xs uppercase tracking-widest py-1 text-brand-muted hover:text-brand-dark" data-i18n="navFeatures">What's included</a>
+            <a href="#process" class="block text-xs uppercase tracking-widest py-1 text-brand-muted hover:text-brand-dark" data-i18n="navProcess">How it works</a>
+            <a href="#contact" class="block text-xs uppercase tracking-widest py-1 text-brand-muted hover:text-brand-dark" data-i18n="navContact">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="top" class="py-24 md:py-36 max-w-4xl mx-auto px-6 text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand-gold/30 bg-white text-brand-dark text-xs font-medium tracking-wide mb-8 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
+            <span data-i18n="heroBadge">Officially Licensed &bull; Tailored for Pharma &amp; Healthcare</span>
+        </div>
+        <h1 class="text-4xl md:text-6xl font-serif font-normal text-brand-dark leading-tight" data-i18n="heroTitle">
+            Web design tailored for pharmaceutical companies &amp; medical practices
+        </h1>
+        <p class="text-brand-muted text-base md:text-lg font-light max-w-2xl mx-auto mt-6 leading-relaxed" data-i18n="heroText">
+            Katameya Pharma provides licensed web design and digital services. We craft clean, high-performance, and SEO-optimized web pages for pharmaceutical businesses, healthcare brands, clinics, and medical practices—delivered as lightweight, ready-to-host files with full ownership and zero ongoing maintenance headaches.
+        </p>
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+            <a data-mailto href="mailto:Katameya_pharma@outlook.com" class="inline-block bg-brand-dark hover:bg-brand-gold text-white text-xs font-medium tracking-widest uppercase px-8 py-4 rounded-full transition-colors shadow-sm" data-i18n="ctaRequest">
+                Request your website
+            </a>
+            <a href="#solutions" class="inline-block bg-white border border-stone-300 hover:border-brand-gold text-brand-dark hover:text-brand-gold text-xs font-medium tracking-widest uppercase px-8 py-4 rounded-full transition-colors" data-i18n="ctaSolutions">
+                Explore solutions
+            </a>
+        </div>
+    </section>
+
+    <!-- Solutions / Sectors We Serve -->
+    <section id="solutions" class="py-20 max-w-5xl mx-auto px-6 border-t border-stone-200/60">
+        <div class="text-center mb-14">
+            <h2 class="text-3xl font-serif font-normal text-brand-dark" data-i18n="solutionsTitle">Tailored solutions for healthcare &amp; pharma</h2>
+            <p class="text-brand-muted text-xs md:text-sm font-light mt-4 max-w-lg mx-auto leading-relaxed" data-i18n="solutionsSubtitle">
+                From corporate pharmaceutical showcases to specialized medical clinics and private practices.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Pharma & Healthcare Brands -->
+            <div class="bg-white p-8 rounded-2xl border border-stone-200/80 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-brand-light flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-capsules text-brand-gold text-xl" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="font-serif font-normal text-lg text-brand-dark leading-snug" data-i18n="sol1Title">Pharmaceutical Companies</h3>
+                    <p class="text-brand-muted text-sm font-light leading-relaxed mt-3" data-i18n="sol1Desc">
+                        Corporate web presence showcasing product portfolios, contract toll manufacturing capabilities, quality certifications, and official inquiry channels for partners and distributors.
+                    </p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-stone-100 text-xs text-brand-gold font-medium tracking-wide" data-i18n="sol1Tag">
+                    B2B &bull; Regulatory Credibility &bull; Products
+                </div>
+            </div>
+
+            <!-- Medical Clinics & Polyclinics -->
+            <div class="bg-white p-8 rounded-2xl border border-stone-200/80 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-brand-light flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-hospital-user text-brand-gold text-xl" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="font-serif font-normal text-lg text-brand-dark leading-snug" data-i18n="sol2Title">Medical Clinics &amp; Centers</h3>
+                    <p class="text-brand-muted text-sm font-light leading-relaxed mt-3" data-i18n="sol2Desc">
+                        Multi-specialty center presentations, clinical services overview, medical staff bios, clinic working hours, and integrated Google Maps directions.
+                    </p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-stone-100 text-xs text-brand-gold font-medium tracking-wide" data-i18n="sol2Tag">
+                    Multi-Doctor &bull; Clinic Hours &bull; Location
+                </div>
+            </div>
+
+            <!-- Doctors & Private Practices -->
+            <div class="bg-white p-8 rounded-2xl border border-stone-200/80 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-brand-light flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-user-doctor text-brand-gold text-xl" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="font-serif font-normal text-lg text-brand-dark leading-snug" data-i18n="sol3Title">Doctors &amp; Consultants</h3>
+                    <p class="text-brand-muted text-sm font-light leading-relaxed mt-3" data-i18n="sol3Desc">
+                        A focused, personalized profile highlighting your specialty, medical qualifications, fellowships, clinic locations, and instant contact options via WhatsApp and phone.
+                    </p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-stone-100 text-xs text-brand-gold font-medium tracking-wide" data-i18n="sol3Tag">
+                    Personal Brand &bull; Qualifications &bull; Direct Reach
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included / Features -->
+    <section id="features" class="py-20 max-w-5xl mx-auto px-6 border-t border-stone-200/60">
+        <div class="text-center mb-14">
+            <h2 class="text-3xl font-serif font-normal text-brand-dark" data-i18n="serviceTitle">What every website includes</h2>
+            <p class="text-brand-muted text-xs md:text-sm font-light mt-4 max-w-lg mx-auto leading-relaxed" data-i18n="serviceText">
+                Engineered for speed, search visibility, high conversion, and seamless viewing on any device.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Feature 1: Introduction & Identity -->
+            <div class="bg-white p-8 rounded-2xl border border-stone-200/80">
+                <i class="fa-regular fa-id-card text-brand-gold text-xl mb-5 block" aria-hidden="true"></i>
+                <h3 class="font-serif font-normal text-base text-brand-dark leading-snug" data-i18n="f1t">Clear Corporate or Practice Identity</h3>
+                <p class="text-brand-muted text-sm font-light leading-relaxed mt-3" data-i18n="f1d">Compelling overview of your organization, services, products, or medical practice with official branding, logos, and high-resolution imagery.</p>
+            </div>
+
+            <!-- Feature 2: Credentials & Verification -->
+            <div class="bg-white p-8 rounded-2xl border border-stone-200/80">
+                <i class="fa-solid fa-award text-brand-gold text-xl mb-5 block" aria-hidden="true"></i>
+                <h3 class="font-serif font-normal text-base text-brand-dark leading-snug" data-i18n="f2t">Credentials &amp; Certifications</h3>
+                <p class="text-brand-muted text-sm font-light leading-relaxed mt-3" data-i18n="f2d">Highlight manufacturing licenses, quality standards, or medical degrees and fellowships, clearly organized to build trust.</p>
+            </div>
+
+            <!-- Feature 3: Fast Contact -->
+            <div class="bg-white p-8 rounded-2xl border border-stone-200/80">
+                <i class="fa-brands fa-whatsapp text-brand-gold text-xl mb-5 block" aria-hidden="true"></i>
+                <h3 class="font-serif font-normal text-base text-brand-dark leading-snug" data-i18n="f3t">Instant Contact Channels</h3>
+                <p class="text-brand-muted text-sm font-light leading-relaxed mt-3" data-i18n="f3d">Direct WhatsApp integration, one-tap phone calls, landlines, and official email links, providing effortless communication.</p>
+            </div>
+
+            <!-- Feature 4: Locations & Maps -->
+            <div class="bg-white p-8 rounded-2xl border border-stone-200/80">
+                <i class="fa-solid fa-location-dot text-brand-gold text-xl mb-5 block" aria-hidden="true"></i>
+                <h3 class="font-serif font-normal text-base text-brand-dark leading-snug" data-i18n="f4t">Location &amp; Map Navigation</h3>
+                <p class="text-brand-muted text-sm font-light leading-relaxed mt-3" data-i18n="f4d">Your complete facility or clinic address with an integrated interactive link directly opening your location in Google Maps.</p>
+            </div>
+
+            <!-- Feature 5: Bilingual -->
+            <div class="bg-white p-8 rounded-2xl border border-stone-200/80">
+                <i class="fa-solid fa-language text-brand-gold text-xl mb-5 block" aria-hidden="true"></i>
+                <h3 class="font-serif font-normal text-base text-brand-dark leading-snug" data-i18n="f5t">Arabic &amp; English Support</h3>
+                <p class="text-brand-muted text-sm font-light leading-relaxed mt-3" data-i18n="f5d">Native right-to-left (RTL) Arabic layout, clean English layout, or an interactive bilingual switch on the same web page.</p>
+            </div>
+
+            <!-- Feature 6: One Static File & Hosting Freedom -->
+            <div class="bg-white p-8 rounded-2xl border border-stone-200/80">
+                <i class="fa-solid fa-file-code text-brand-gold text-xl mb-5 block" aria-hidden="true"></i>
+                <h3 class="font-serif font-normal text-base text-brand-dark leading-snug" data-i18n="f6t">One Clean Static File</h3>
+                <p class="text-brand-muted text-sm font-light leading-relaxed mt-3" data-i18n="f6d">No database overhead and no CMS vulnerabilities. Ultra-secure, ultra-fast, and comes with a clear self-hosting manual.</p>
+            </div>
+
+            <!-- Feature 7: SEO (Full Width) -->
+            <div class="bg-white p-8 rounded-2xl border border-stone-200/80 md:col-span-2 lg:col-span-3 flex flex-col sm:flex-row items-start sm:items-center gap-6">
+                <div class="w-12 h-12 rounded-xl bg-brand-light flex items-center justify-center shrink-0">
+                    <i class="fa-solid fa-magnifying-glass text-brand-gold text-xl" aria-hidden="true"></i>
+                </div>
+                <div>
+                    <h3 class="font-serif font-normal text-base text-brand-dark leading-snug" data-i18n="f7t">Search Engine Optimized (SEO)</h3>
+                    <p class="text-brand-muted text-sm font-light leading-relaxed mt-1" data-i18n="f7d">Built with clean semantic markup, fast-loading assets, and tailored meta tags so partners, clients, and patients find your organization effortlessly on Google.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Licensing & Official Status -->
+    <section id="licensing" class="py-20 max-w-5xl mx-auto px-6 border-t border-stone-200/60">
+        <div class="max-w-3xl mx-auto p-8 rounded-2xl bg-white border border-stone-200/80 flex items-start gap-5 text-start">
+            <div class="w-12 h-12 rounded-full bg-brand-light flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-certificate text-brand-gold text-xl" aria-hidden="true"></i>
+            </div>
+            <div class="space-y-3 text-sm font-light leading-relaxed">
+                <h2 class="font-serif font-normal text-xl text-brand-dark" data-i18n="licTitle">Officially Registered &amp; Licensed Service</h2>
+                <p class="text-brand-muted" data-i18n="licDesc1">Katameya Pharma provides officially licensed information technology and web design services. You work with an established corporate entity, not an anonymous freelancer.</p>
+                <p class="text-brand-muted" data-i18n="licDesc2">We only accept payment to the company's official corporate bank account, and we issue a certified electronic tax invoice for every project.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works / Process -->
+    <section id="process" class="py-20 max-w-5xl mx-auto px-6 border-t border-stone-200/60">
+        <div class="text-center mb-14">
+            <h2 class="text-3xl font-serif font-normal text-brand-dark" data-i18n="processTitle">How it works</h2>
+            <p class="text-brand-muted text-xs md:text-sm font-light mt-4 max-w-lg mx-auto leading-relaxed" data-i18n="processSubtitle">
+                A simple three-step process from requirements to your completed website.
+            </p>
+        </div>
+
+        <ol class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <li class="bg-white p-8 rounded-2xl border border-stone-200/80">
+                <span class="font-serif text-2xl text-brand-gold block mb-4">1</span>
+                <h3 class="font-serif font-normal text-base text-brand-dark leading-snug" data-i18n="p1t">Send your requirements</h3>
+                <p class="text-brand-muted text-sm font-light leading-relaxed mt-3" data-i18n="p1d">Email us your entity name, overview, services or products, contact numbers, addresses, logo, and brand assets.</p>
+            </li>
+            <li class="bg-white p-8 rounded-2xl border border-stone-200/80">
+                <span class="font-serif text-2xl text-brand-gold block mb-4">2</span>
+                <h3 class="font-serif font-normal text-base text-brand-dark leading-snug" data-i18n="p2t">We design &amp; optimize</h3>
+                <p class="text-brand-muted text-sm font-light leading-relaxed mt-3" data-i18n="p2d">We develop your custom responsive page, optimize the structure for Google (SEO), and ensure flawless mobile readability.</p>
+            </li>
+            <li class="bg-white p-8 rounded-2xl border border-stone-200/80">
+                <span class="font-serif text-2xl text-brand-gold block mb-4">3</span>
+                <h3 class="font-serif font-normal text-base text-brand-dark leading-snug" data-i18n="p3t">Delivery &amp; hosting manual</h3>
+                <p class="text-brand-muted text-sm font-light leading-relaxed mt-3" data-i18n="p3d">Review your page and request any adjustments. You then receive the completed HTML file plus a manual explaining how to host it anywhere.</p>
+            </li>
+        </ol>
+
+        <!-- Terms / Scope note -->
+        <div class="max-w-2xl mx-auto mt-12 p-6 rounded-2xl bg-white border border-stone-200/80 flex items-start gap-4 text-start">
+            <div class="w-10 h-10 rounded-full bg-brand-light flex items-center justify-center shrink-0 mt-0.5">
+                <i class="fa-solid fa-file-invoice text-brand-gold text-base" aria-hidden="true"></i>
+            </div>
+            <div class="space-y-1.5 text-sm font-light leading-relaxed">
+                <h4 class="font-serif font-normal text-base text-brand-dark" data-i18n="feeTitle">Service fee &amp; scope</h4>
+                <p class="text-brand-muted" data-i18n="feeScope">The fee covers complete design, coding, SEO optimization, and the final source file delivery. Domain registration and hosting server fees are handled separately by your chosen provider.</p>
+                <p class="text-brand-muted text-xs" data-i18n="payNote">Payment is transferred directly to Katameya Pharma's official bank account, and a verified electronic invoice is issued.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Request -->
+    <section id="contact" class="py-20 max-w-3xl mx-auto px-6 border-t border-stone-200/60">
+        <div class="text-center">
+            <h2 class="text-3xl font-serif font-normal text-brand-dark" data-i18n="contactTitle">Start your website project</h2>
+            <p class="text-brand-muted text-xs md:text-sm font-light mt-4 max-w-lg mx-auto leading-relaxed" data-i18n="contactText">
+                Email us with your project details. The button below opens a pre-drafted email with the necessary information fields.
+            </p>
+            <div class="mt-8">
+                <a data-mailto href="mailto:Katameya_pharma@outlook.com" class="inline-flex items-center gap-2 bg-brand-dark hover:bg-brand-gold text-white text-xs font-medium tracking-widest uppercase px-8 py-4 rounded-full transition-colors shadow-sm">
+                    <i class="fa-regular fa-envelope text-sm" aria-hidden="true"></i>
+                    Katameya_pharma@outlook.com
+                </a>
+            </div>
+            <p class="text-xs text-brand-muted mt-6 font-light" data-i18n="contactNote">
+                We respond within 24–48 hours with pricing, timeline, and asset checklist.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-white border-t border-stone-200/60 text-center text-xs text-brand-muted">
+        <div class="max-w-5xl mx-auto px-6 space-y-3">
+            <p class="font-serif text-brand-dark text-sm tracking-wide">Katameya Pharma</p>
+            <p class="text-[11px] uppercase tracking-widest" data-i18n="footSub">Licensed Web Design &amp; Digital Services</p>
+            <p class="text-[10px] pt-4">&copy; 2026 Katameya Pharma. <span data-i18n="rights">All rights reserved.</span></p>
+        </div>
+    </footer>
+
+    <!-- Interactive Logic (Translations & Menu) -->
+    <script>
+        const T = {
+            en: {
+                brandSub: 'Web Design Services',
+                navHome: 'Home',
+                navSolutions: 'Solutions',
+                navFeatures: "What's included",
+                navProcess: 'How it works',
+                navContact: 'Contact',
+                heroBadge: 'Officially Licensed • Tailored for Pharma & Healthcare',
+                heroTitle: 'Web design tailored for pharmaceutical companies & medical practices',
+                heroText: 'Katameya Pharma provides licensed web design and digital services. We craft clean, high-performance, and SEO-optimized web pages for pharmaceutical businesses, healthcare brands, clinics, and medical practices—delivered as lightweight, ready-to-host files with full ownership and zero ongoing maintenance headaches.',
+                ctaRequest: 'Request your website',
+                ctaSolutions: 'Explore solutions',
+                solutionsTitle: 'Tailored solutions for healthcare & pharma',
+                solutionsSubtitle: 'From corporate pharmaceutical showcases to specialized medical clinics and private practices.',
+                sol1Title: 'Pharmaceutical Companies',
+                sol1Desc: 'Corporate web presence showcasing product portfolios, contract toll manufacturing capabilities, quality certifications, and official inquiry channels for partners and distributors.',
+                sol1Tag: 'B2B • Regulatory Credibility • Products',
+                sol2Title: 'Medical Clinics & Centers',
+                sol2Desc: 'Multi-specialty center presentations, clinical services overview, medical staff bios, clinic working hours, and integrated Google Maps directions.',
+                sol2Tag: 'Multi-Doctor • Clinic Hours • Location',
+                sol3Title: 'Doctors & Consultants',
+                sol3Desc: 'A focused, personalized profile highlighting your specialty, medical qualifications, fellowships, clinic locations, and instant contact options via WhatsApp and phone.',
+                sol3Tag: 'Personal Brand • Qualifications • Direct Reach',
+                serviceTitle: 'What every website includes',
+                serviceText: 'Engineered for speed, search visibility, high conversion, and seamless viewing on any device.',
+                f1t: 'Clear Corporate or Practice Identity',
+                f1d: 'Compelling overview of your organization, services, products, or medical practice with official branding, logos, and high-resolution imagery.',
+                f2t: 'Credentials & Certifications',
+                f2d: 'Highlight manufacturing licenses, quality standards, or medical degrees and fellowships, clearly organized to build trust.',
+                f3t: 'Instant Contact Channels',
+                f3d: 'Direct WhatsApp integration, one-tap phone calls, landlines, and official email links, providing effortless communication.',
+                f4t: 'Location & Map Navigation',
+                f4d: 'Your complete facility or clinic address with an integrated interactive link directly opening your location in Google Maps.',
+                f5t: 'Arabic & English Support',
+                f5d: 'Native right-to-left (RTL) Arabic layout, clean English layout, or an interactive bilingual switch on the same web page.',
+                f6t: 'One Clean Static File',
+                f6d: 'No database overhead and no CMS vulnerabilities. Ultra-secure, ultra-fast, and comes with a clear self-hosting manual.',
+                f7t: 'Search Engine Optimized (SEO)',
+                f7d: 'Built with clean semantic markup, fast-loading assets, and tailored meta tags so partners, clients, and patients find your organization effortlessly on Google.',
+                licTitle: 'Officially Registered & Licensed Service',
+                licDesc1: 'Katameya Pharma provides officially licensed information technology and web design services. You work with an established corporate entity, not an anonymous freelancer.',
+                licDesc2: "We only accept payment to the company's official corporate bank account, and we issue a certified electronic tax invoice for every project.",
+                processTitle: 'How it works',
+                processSubtitle: 'A simple three-step process from requirements to your completed website.',
+                p1t: 'Send your requirements',
+                p1d: 'Email us your entity name, overview, services or products, contact numbers, addresses, logo, and brand assets.',
+                p2t: 'We design & optimize',
+                p2d: 'We develop your custom responsive page, optimize the structure for Google (SEO), and ensure flawless mobile readability.',
+                p3t: 'Delivery & hosting manual',
+                p3d: 'Review your page and request any adjustments. You then receive the completed HTML file plus a manual explaining how to host it anywhere.',
+                feeTitle: 'Service fee & scope',
+                feeScope: 'The fee covers complete design, coding, SEO optimization, and the final source file delivery. Domain registration and hosting server fees are handled separately by your chosen provider.',
+                payNote: "Payment is transferred directly to Katameya Pharma's official bank account, and a verified electronic invoice is issued.",
+                contactTitle: 'Start your website project',
+                contactText: 'Email us with your project details. The button below opens a pre-drafted email with the necessary information fields.',
+                contactNote: 'We respond within 24–48 hours with pricing, timeline, and asset checklist.',
+                footSub: 'Licensed Web Design & Digital Services',
+                rights: 'All rights reserved.',
+                mailSubject: 'Web Design Service Request - Katameya Pharma',
+                mailBody: 'Hello Katameya Pharma,\n\nI would like to request a website project. Details below:\n\nEntity / Practice Name:\nType (Pharma Company / Clinic / Doctor / Healthcare Brand):\nSpecialty or Industry Sector:\nKey Services / Products to highlight:\nClinic or Facility Address:\nContact Phone / WhatsApp:\nOfficial Email:\nPreferred Language (English / Arabic / Both):\n\nI will provide our logo, photos, and relevant text materials.\n'
+            },
+            ar: {
+                brandSub: 'خدمات تصميم المواقع',
+                navHome: 'الرئيسية',
+                navSolutions: 'حلولنا',
+                navFeatures: 'محتويات الموقع',
+                navProcess: 'خطوات العمل',
+                navContact: 'تواصل معنا',
+                heroBadge: 'خدمة مرخصة رسمياً • مخصصة للقطاع الطبي والدوائي',
+                heroTitle: 'تصميم مواقع احترافية للشركات الدوائية والقطاع الطبي',
+                heroText: 'تقدم القطامية فارما خدمات تصميم مواقع رقمية مرخصة رسمياً. نصمم صفحات ويب عصرية، فائقة السرعة، ومهيأة لمحركات البحث (SEO) للشركات الدوائية، العلامات التجارية الصحية، العيادات، والمراكز الطبية—تُسلم كملفات ثابتة جاهزة للاستضافة المباشرة بملكية كاملة وبدون أعباء صيانة معقدة.',
+                ctaRequest: 'اطلب موقعك الآن',
+                ctaSolutions: 'استعرض حلولنا',
+                solutionsTitle: 'حلول مخصصة للقطاعين الطبي والدوائي',
+                solutionsSubtitle: 'من الواجهات الرسمية للشركات والمصانع الدوائية إلى المراكز الطبية والعيادات التخصصية.',
+                sol1Title: 'الشركات الدوائية',
+                sol1Desc: 'واجهة رقمية مؤسسية تستعرض محفظة المستحضرات، إمكانيات التصنيع لدى الغير (Toll Manufacturing)، شهادات الجودة والتراخيص، وقنوات التواصل المباشرة للوكلاء والموزعين.',
+                sol1Tag: 'أعمال B2B • مصداقية تنظيمية • منتجات',
+                sol2Title: 'المراكز والعيادات الطبية',
+                sol2Desc: 'عرض متكامل للمراكز متعددة التخصصات، الخدمات الطبية، نبذة عن الكادر الطبي، مواعيد العمل، وموقع العيادة على خرائط جوجل.',
+                sol2Tag: 'عيادات متعددة • مواعيد العمل • خريطة الموقع',
+                sol3Title: 'الأطباء والاستشاريون',
+                sol3Desc: 'صفحة مهنية تركز على اسم الطبيب وتخصصه، الشهادات والزمالات العلمية، فروع العيادة ومواعيدها، وطرق التواصل السريع والمباشر عبر الواتساب والاتصال.',
+                sol3Tag: 'هوية مهنية • مؤهلات علمية • وصول مباشر',
+                serviceTitle: 'ماذا يتضمن كل موقع',
+                serviceText: 'مصمم خصيصاً للسرعة العالية، تصدر نتائج البحث، وبناء ثقة العملاء والمرضى.',
+                f1t: 'هوية مؤسسية أو مهنية واضحة',
+                f1d: 'عرض شامل وموجز لشركتك أو عيادتك أو خدماتك مع الشعار الرسمي والصور عالية الدقة وتنسيق بصري راقٍ.',
+                f2t: 'المؤهلات والاعتمادات الرسمية',
+                f2d: 'إبراز تراخيص التصنيع، معايير الجودة، أو الشهادات والدرجات العلمية والزمالات الطبية لتعزيز المصداقية.',
+                f3t: 'قنوات تواصل مباشرة وسريعة',
+                f3d: 'تكامل مباشر مع الواتساب، وأزرار الاتصال الهاتفي بلمسة واحدة، والأرقام الأرضية والبريد الرسمي.',
+                f4t: 'العنوان وخريطة الموقع',
+                f4d: 'العنوان الكامل لمنشأتك أو عيادتك مع زر يفتح الموقع فوراً وبدقة على تطبيق خرائط جوجل.',
+                f5t: 'دعم كامل للعربية والإنجليزية',
+                f5d: 'تصميم عربي أصيل من اليمين لليسار (RTL)، وتصميم إنجليزي أنيق، أو اللغتان معاً بزر تحويل سلس وسريع.',
+                f6t: 'ملف ثابت وخفيف بدون تعقيدات',
+                f6d: 'ملف HTML نقي بدون قواعد بيانات ثقيلة أو ثغرات أمنية، فائق السرعة، مع دليل واضح للاستضافة الذاتية.',
+                f7t: 'مهيأ لمحركات البحث (SEO)',
+                f7d: 'بنية برمجية نظيفة وفق أحدث معايير الويب ووسوم وصفية دقيقة ليظهر موقعك بسهولة لعملائك ومرضاك على جوجل.',
+                licTitle: 'خدمة مرخصة ومسجلة رسمياً',
+                licDesc1: 'تقدم القطامية فارما خدمات تكنولوجيا المعلومات وتصميم المواقع بترخيص رسمي معتمد، لتضمن التعامل مع كيان قانوني موثوق.',
+                licDesc2: 'يتم سداد المقابل المالي حصرياً عبر الحساب البنكي الرسمي للشركة، وتصدر فاتورة إلكترونية ضريبية معتمدة لكل عميل.',
+                processTitle: 'خطوات العمل',
+                processSubtitle: 'ثلاث خطوات واضحة وميسرة من البداية وحتى استلام موقعك الجاهز.',
+                p1t: 'أرسل بياناتك ومتطلباتك',
+                p1d: 'راسلنا ببيانات شركتك أو عيادتك، نبذة عن الخدمات أو المنتجات، الأرقام والعناوين، والشعار والصور.',
+                p2t: 'نصمم ونطور الصفحة',
+                p2d: 'نبرمج صفحة مخصصة متجاوبة بدقة مع شاشات الهواتف والحواسيب، ونهيئها لمحركات البحث والسرعة الفائقة.',
+                p3t: 'المراجعة واستلام الملف والدليل',
+                p3d: 'تعاين صفحتك وتطلب أي تعديلات، ثم تستلم ملف الـ HTML النهائي مع دليل إرشادي يشرح كيفية رفعه على أي خادم.',
+                feeTitle: 'رسوم الخدمة ونطاقها',
+                feeScope: 'تشمل الرسوم التصميم والتطوير البرمجي وتهيئة الـ SEO وتسليم ملفات المصدر الجاهزة، بينما تُسدد رسوم الدومين والاستضافة للشركات المزودة لها حسب اختيارك.',
+                payNote: 'يتم التحويل على الحساب البنكي الرسمي لشركة القطامية فارما وتصدر فاتورة إلكترونية معتمدة.',
+                contactTitle: 'ابدأ مشروع موقعك الآن',
+                contactText: 'راسلنا بالبريد الإلكتروني ببيانات منشأتك. الزر أدناه يفتح رسالة جاهزة تتضمن الحقول المطلوبة لتسهيل مراسلتنا.',
+                contactNote: 'نرد خلال 24 إلى 48 ساعة بتفاصيل الخطة والتكلفة وقائمة المستندات المطلوبة.',
+                footSub: 'خدمات تصميم المواقع وتكنولوجيا المعلومات المرخصة',
+                rights: 'جميع الحقوق محفوظة.',
+                mailSubject: 'طلب تصميم موقع - القطامية فارما',
+                mailBody: 'مرحبًا شركة القطامية فارما،\n\nأرغب في طلب تصميم موقع ويب. البيانات الأولية:\n\nاسم المنشأة / العيادة / الطبيب:\nنوع النشاط (شركة دوائية / مركز طبي / عيادة طبيب / علامة تجارية صحية):\nالتخصص أو المجال:\nأبرز الخدمات أو المنتجات المراد عرضها:\nعنوان المقر أو العيادة:\nرقم الهاتف / الواتساب:\nالبريد الإلكتروني الرسمي:\nاللغة المفضلة (عربي / إنجليزي / اللغتان معاً):\n\nسأرفق الشعار والصور والنصوص التعريفية المطلوبة.\n'
+            }
+        };
+
+        const EMAIL = 'Katameya_pharma@outlook.com';
+        const langBtn = document.getElementById('lang-btn');
+        let lang = 'en';
+
+        function applyLang(next) {
+            lang = next;
+            const t = T[lang];
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const v = t[el.dataset.i18n];
+                if (v !== undefined) el.textContent = v;
+            });
+            const href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(t.mailSubject) + '&body=' + encodeURIComponent(t.mailBody);
+            document.querySelectorAll('[data-mailto]').forEach(a => a.setAttribute('href', href));
+            langBtn.textContent = lang === 'ar' ? 'English' : 'العربية';
+            langBtn.setAttribute('aria-label', lang === 'ar' ? 'Switch to English' : 'التبديل إلى العربية');
+        }
+
+        langBtn.addEventListener('click', () => applyLang(lang === 'en' ? 'ar' : 'en'));
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            const open = mobileMenu.classList.toggle('hidden') === false;
+            menuBtn.setAttribute('aria-expanded', String(open));
+        });
+        document.querySelectorAll('#mobile-menu a').forEach(l => l.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuBtn.setAttribute('aria-expanded', 'false');
+        }));
+
+        applyLang('en');
+    </script>
+</body>
+</html>
