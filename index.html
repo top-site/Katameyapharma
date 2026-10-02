@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katameya Pharma</title>
+    <meta name="description" content="Katameya Pharma is a cosmetics toll manufacturing company with the KatameyaCosmo line, and provides licensed web design services.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { gold: '#C5A059', rose: '#E6C7C2', light: '#FBF9F7', dark: '#1C1C1C', muted: '#7A7A7A' }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #FBF9F7; color: #1C1C1C; }
+        h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
+        a:focus-visible, button:focus-visible { outline: 2px solid #C5A059; outline-offset: 3px; }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto !important; } * { transition: none !important; } }
+    </style>
+</head>
+<body class="bg-brand-light text-brand-dark antialiased selection:bg-brand-rose selection:text-brand-dark">
+
+    <header class="sticky top-0 z-40 bg-brand-light/90 backdrop-blur-md border-b border-stone-200/60">
+        <div class="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between gap-4">
+            <a href="#top" class="group">
+                <span class="font-serif font-bold text-lg tracking-wider block text-brand-dark">Katameya Pharma</span>
+            </a>
+            <div class="flex items-center gap-6">
+                <nav class="hidden md:flex items-center gap-8 text-xs font-medium tracking-widest uppercase text-brand-muted">
+                    <a href="#activities" class="hover:text-brand-dark transition-colors">Activities</a>
+                    <a href="#licensing" class="hover:text-brand-dark transition-colors">Licensing</a>
+                    <a href="#contact" class="hover:text-brand-dark transition-colors">Contact</a>
+                </nav>
+                <button id="menu-btn" type="button" aria-label="Toggle menu" aria-expanded="false" class="md:hidden text-brand-dark p-2">
+                    <i class="fa-solid fa-bars text-lg"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-light border-b border-stone-200 px-6 py-4 space-y-3">
+            <a href="#activities" class="block text-xs uppercase tracking-widest py-1 text-brand-muted hover:text-brand-dark">Activities</a>
+            <a href="#licensing" class="block text-xs uppercase tracking-widest py-1 text-brand-muted hover:text-brand-dark">Licensing</a>
+            <a href="#contact" class="block text-xs uppercase tracking-widest py-1 text-brand-muted hover:text-brand-dark">Contact</a>
+        </div>
+    </header>
+
+    <section id="top" class="py-24 md:py-36 max-w-4xl mx-auto px-6 text-center">
+        <h1 class="text-4xl md:text-6xl font-serif font-normal text-brand-dark leading-tight">Katameya Pharma</h1>
+        <p class="text-brand-muted text-base md:text-lg font-light max-w-2xl mx-auto mt-6 leading-relaxed">
+            A cosmetics toll manufacturing company with a registered cosmetics line, and licensed information technology services.
+        </p>
+        <div class="mt-10">
+            <a href="#activities" class="inline-block bg-brand-dark hover:bg-brand-gold text-white text-xs font-medium tracking-widest uppercase px-8 py-4 rounded-full transition-colors">Our activities</a>
+        </div>
+    </section>
+
+    <section id="activities" class="py-20 max-w-5xl mx-auto px-6 border-t border-stone-200/60">
+        <div class="text-center mb-14">
+            <h2 class="text-3xl font-serif font-normal text-brand-dark">What we do</h2>
+            <p class="text-brand-muted text-xs md:text-sm font-light mt-4 max-w-lg mx-auto leading-relaxed">Two areas of work, each one carried out under its own official registration or license.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <div class="bg-white p-8 rounded-2xl border border-stone-200/80">
+                <i class="fa-solid fa-spa text-brand-gold text-xl mb-5 block" aria-hidden="true"></i>
+                <h3 class="font-serif font-normal text-base text-brand-dark leading-snug">Cosmetics contract manufacturing</h3>
+                <p class="text-brand-muted text-sm font-light leading-relaxed mt-3">Our KatameyaCosmo line of personal care products is manufactured for us under contract at third-party facilities.</p>
+                <a href="https://katameyacosmo.com/" target="_blank" rel="noopener noreferrer" class="inline-block mt-5 text-xs font-medium tracking-widest uppercase text-brand-dark hover:text-brand-gold transition-colors">View the collection</a>
+            </div>
+            <div class="bg-white p-8 rounded-2xl border border-stone-200/80">
+                <i class="fa-solid fa-laptop-medical text-brand-gold text-xl mb-5 block" aria-hidden="true"></i>
+                <h3 class="font-serif font-normal text-base text-brand-dark leading-snug">Web design services</h3>
+                <p class="text-brand-muted text-sm font-light leading-relaxed mt-3">We offer building professional, SEO-optimized web pages tailored for pharmaceutical companies and medical clinics, delivered as a ready-to-host file.</p>
+                <a href="index-doctor-service.html" class="inline-block mt-5 text-xs font-medium tracking-widest uppercase text-brand-dark hover:text-brand-gold transition-colors">Request a page</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="licensing" class="py-20 max-w-5xl mx-auto px-6 border-t border-stone-200/60">
+        <div class="max-w-2xl mx-auto p-8 rounded-2xl bg-white border border-stone-200/80 flex items-start gap-5 text-start">
+            <div class="w-12 h-12 rounded-full bg-brand-light flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-certificate text-brand-gold text-xl" aria-hidden="true"></i>
+            </div>
+            <div class="space-y-3 text-sm font-light leading-relaxed">
+                <h2 class="font-serif font-normal text-xl text-brand-dark">Official and licensed</h2>
+                <p class="text-brand-muted">Katameya Pharma is a company registered in cosmetics toll manufacturing. Alongside that, it carries out officially licensed information technology services.</p>
+                <p class="text-brand-muted">We only accept payment to the company's bank account and issue an official electronic invoice.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 max-w-3xl mx-auto px-6 border-t border-stone-200/60">
+        <div class="text-center">
+            <h2 class="text-3xl font-serif font-normal text-brand-dark">Get in touch</h2>
+            <p class="text-brand-muted text-xs md:text-sm font-light mt-4 max-w-lg mx-auto leading-relaxed">Write to us for business inquiries, distribution requests or to verify our license details.</p>
+            <div class="mt-8">
+                <a href="mailto:Katameya_pharma@outlook.com" class="inline-flex items-center gap-2 bg-brand-dark hover:bg-brand-gold text-white text-xs font-medium tracking-widest uppercase px-8 py-4 rounded-full transition-colors">
+                    <i class="fa-regular fa-envelope text-sm" aria-hidden="true"></i>
+                    Katameya_pharma@outlook.com
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-white border-t border-stone-200/60 text-center text-xs text-brand-muted">
+        <div class="max-w-5xl mx-auto px-6 space-y-3">
+            <p class="font-serif text-brand-dark text-sm tracking-wide">Katameya Pharma</p>
+            <p class="text-[10px] pt-4">&copy; 2026 Katameya Pharma. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            const open = mobileMenu.classList.toggle('hidden') === false;
+            menuBtn.setAttribute('aria-expanded', String(open));
+        });
+        document.querySelectorAll('#mobile-menu a').forEach(l => l.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuBtn.setAttribute('aria-expanded', 'false');
+        }));
+    </script>
+</body>
+</html>
